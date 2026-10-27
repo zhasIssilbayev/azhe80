@@ -81,9 +81,16 @@ border:1px solid var(--gold);background:rgba(250,248,242,.92);color:var(--gold);
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(160,127,66,.5)}100%{box-shadow:0 0 0 16px rgba(160,127,66,0)}}
 .fade{opacity:0;transform:translateY(22px);transition:opacity .9s,transform .9s}
 .fade.show{opacity:1;transform:none}
+
+#cover{position:fixed;inset:0;z-index:20;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;padding:24px;text-align:center;transition:opacity .8s,visibility .8s;cursor:pointer}
+#cover.off{opacity:0;visibility:hidden;pointer-events:none}
+#cover .w{width:min(260px,66vw);animation:spin 40s linear infinite}
+#cover .t{font-family:'Asylbek','Noto Serif Display',serif;font-size:34px;color:var(--gold)}
+#cover .b{padding:14px 34px;background:var(--gold);color:#fff;border-radius:40px;letter-spacing:.06em;text-transform:uppercase;font-size:16px;box-shadow:0 10px 22px rgba(122,92,46,.3);border:0;font-family:inherit;cursor:pointer}
+body.lock{overflow:hidden}
 </style>
 </head>
-<body>
+<body class="lock">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
@@ -106,6 +113,7 @@ border:1px solid var(--gold);background:rgba(250,248,242,.92);color:var(--gold);
   </defs>
 </svg>
 
+<div id="cover"><img class="w" src="img/wreath.webp" alt=""><div class="t">Мерейтойға шақыру</div><button class="b" id="open">Шақыруды ашу</button></div>
 <audio id="aud" src="music.mp3" loop preload="auto"></audio>
 <button id="music" aria-label="Музыка" title="Музыка"></button>
 
@@ -218,6 +226,15 @@ a.play().then(()=>set(true)).catch(()=>{
   const first=()=>{a.play().then(()=>set(true)).catch(()=>{})};
   ['click','touchstart','scroll'].forEach(ev=>addEventListener(ev,first,{once:true,passive:true}));
 });
+
+// cover: one tap opens the invitation and starts the music
+(function(){
+  const c=document.getElementById('cover');
+  c.addEventListener('click',()=>{
+    a.play().then(()=>set(true)).catch(()=>{});
+    c.classList.add('off');document.body.classList.remove('lock');
+  },{once:true});
+})();
 </script>
 </body>
 </html>

@@ -212,8 +212,8 @@ body.lock{overflow:hidden}
 const target=new Date('2026-12-12T13:00:00+05:00').getTime();
 const $=id=>document.getElementById(id);
 function tick(){
-  let t=Math.max(0,target-Date.now());
-  $('d').textContent=Math.floor(t/864e5);
+  let t=target-Date.now();const sg=t<0?'− ':'';t=Math.abs(t); // after the start the counter goes negative
+  $('d').textContent=sg+Math.floor(t/864e5);
   $('h').textContent=Math.floor(t/36e5)%24;
   $('m').textContent=Math.floor(t/6e4)%60;
   $('s').textContent=Math.floor(t/1e3)%60;

@@ -236,6 +236,14 @@ a.play().then(()=>set(true)).catch(()=>{
   ['click','touchstart','scroll'].forEach(ev=>addEventListener(ev,first,{once:true,passive:true}));
 });
 
+// pause when the page is hidden (tab switched / app minimised), resume on return
+let wasPlaying=false;
+document.addEventListener('visibilitychange',()=>{
+  if(document.hidden){wasPlaying=!a.paused;if(wasPlaying){a.pause();set(false)}}
+  else if(wasPlaying){a.play().then(()=>set(true)).catch(()=>{});wasPlaying=false}
+});
+addEventListener('pagehide',()=>{a.pause()});
+
 // cover: one tap opens the invitation and starts the music
 (function(){
   const c=document.getElementById('cover');

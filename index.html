@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Байгужина Теңдік – 80 жас мерейтойы</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'KZ_RomulC';src:url(fonts/KZ_RomulC.woff2) format('woff2'),url(fonts/KZ_RomulC.otf) format('opentype');font-display:swap}
+@font-face{font-family:'Asylbek';src:url(fonts/_AsylbekM02Shelley.kz_.woff2) format('woff2'),url(fonts/_AsylbekM02Shelley.kz_.ttf) format('truetype');font-display:swap}
+:root{--bg:#faf8f2;--gold:#a07f42;--gold-d:#7a5c2e;--gold-l:#f2d777;--ornament:#f6efd9;--brown:#765a37}
+*{box-sizing:border-box}
+html{background:#1b1b1b}
+body{margin:0;background:var(--bg);color:var(--gold);font-family:'KZ_RomulC','Noto Serif Display',serif;line-height:1.5;overflow-x:hidden}
+.page{max-width:480px;margin:0 auto;background:var(--bg);position:relative;overflow:hidden}
+section{text-align:center;padding:56px 28px;position:relative}
+.script{font-family:'Asylbek','Noto Serif Display',serif;font-weight:400;font-size:34px;color:var(--gold);margin:0 0 22px;line-height:1.2}
+.caps{text-transform:uppercase;letter-spacing:.06em;color:var(--gold);font-size:20px;line-height:1.6;margin:0}
+.caps.sm{font-size:15px;letter-spacing:.12em}
+.gold-txt{background:linear-gradient(170deg,#fff0a8 0%,#e8b92f 35%,#b9861a 60%,#f5d567 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* faded Kazakh ornaments */
+.orn-bg{position:absolute;width:300px;height:auto;opacity:.1;pointer-events:none;z-index:0;animation:spin 60s linear infinite}
+.orn-bg.r{right:-110px;top:-10px}
+.orn-bg.l{left:-120px;top:20px}
+section>*{position:relative;z-index:1}
+
+/* hero */
+.hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding-top:70px}
+.wreath{position:relative;width:min(300px,78vw);aspect-ratio:1;margin:10px auto}
+.wreath .spin{position:absolute;inset:0;width:100%;height:100%;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.wreath .num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:6px}
+.num b{font-family:'Noto Serif Display',serif;font-weight:800;font-size:clamp(84px,27vw,112px);line-height:.95;
+  background:linear-gradient(175deg,#fff3b0,#e6b52c 40%,#a8780f 70%,#f0cf5a);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 1px rgba(120,80,0,.35))}
+.num span{font-size:28px;letter-spacing:.12em;color:var(--gold);margin-top:-4px}
+.hint{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-top:20px}
+.hint img{width:64px;height:64px;object-fit:contain;animation:bobup 1.8s infinite}
+@keyframes bobup{0%,100%{transform:rotate(180deg)}50%{transform:rotate(180deg) translateY(7px)}}
+@keyframes bob{50%{transform:translateY(-7px)}}
+
+/* calendar */
+.cal{max-width:290px;margin:26px auto 0}
+.cal-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:22px;padding:0 4px}
+.cal-head b{font-weight:400;font-size:26px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-d)}
+.cal-head span{font-size:26px;letter-spacing:.08em}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);row-gap:10px;text-align:center}
+.grid .dow{font-size:13px;letter-spacing:.04em;padding-bottom:8px}
+.grid .d{font-size:16px;height:38px;display:flex;align-items:center;justify-content:center;position:relative}
+.grid .d.hl::after{content:"";position:absolute;width:42px;height:42px;border:1.6px solid var(--gold);border-radius:52% 48% 50% 50%/48% 52% 48% 52%;transform:rotate(-12deg)}
+.grid .d.hl{color:var(--gold-d)}
+.start{margin:26px auto 0;max-width:260px;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;
+  background:#f2ede4;border-radius:14px;border-left:4px solid var(--gold);text-transform:uppercase;font-size:18px}
+.start b{font-weight:400;font-size:26px}
+.divider{display:block;margin:0 auto;width:320px;max-width:100%;height:auto}
+
+/* map */
+.venue{font-size:22px;text-transform:uppercase;letter-spacing:.05em;margin:0 0 20px;color:var(--gold-d)}
+.gis{width:66px;height:66px;border-radius:11px;margin-top:6px}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:15px 30px;background:var(--gold);color:#fff;border-radius:40px;
+  text-decoration:none;text-transform:uppercase;letter-spacing:.05em;font-size:16px;box-shadow:0 10px 22px rgba(122,92,46,.3)}
+.btn svg{width:16px;height:16px}
+
+/* countdown band */
+.band{background:var(--brown);color:#f8f1e3;padding:44px 20px 50px;text-align:center;position:relative;overflow:hidden}
+.band h3{font-weight:400;font-size:22px;letter-spacing:.08em;text-transform:uppercase;margin:14px 0 24px;color:#fff}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:340px;margin:0 auto}
+.cd div{padding:6px 0}
+.cd b{display:block;font-family:'Noto Serif Display',serif;font-weight:700;font-size:34px;font-weight:700;color:#f6e2a6}
+.cd span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.heart{width:90px;height:auto;filter:brightness(1.25)}
+
+.footer-line{display:block;margin:0 auto 24px;width:min(340px,100%);height:auto}
+.diamond{display:block;margin:30px auto 0;width:300px;max-width:100%;height:auto}
+.from{font-family:'Asylbek','Noto Serif Display',serif;font-weight:400;font-size:30px;margin-top:10px}
+
+#music{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:50px;height:50px;border-radius:50%;
+border:1px solid var(--gold);background:rgba(250,248,242,.92);color:var(--gold);cursor:pointer;z-index:9;display:grid;place-items:center;box-shadow:0 6px 16px rgba(0,0,0,.2)}
+#music svg{width:22px;height:22px}
+#music.on{animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(160,127,66,.5)}100%{box-shadow:0 0 0 16px rgba(160,127,66,0)}}
+.fade{opacity:0;transform:translateY(22px);transition:opacity .9s,transform .9s}
+.fade.show{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff0a0"/><stop offset=".35" stop-color="#e8b92f"/>
+      <stop offset=".65" stop-color="#b3820f"/><stop offset="1" stop-color="#f5d567"/>
+    </linearGradient>
+    <!-- Kazakh scroll ornament (faded background) -->
+    <symbol id="kz" viewBox="0 0 200 200">
+      <g fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round">
+        <circle cx="100" cy="100" r="70"/><circle cx="100" cy="100" r="44"/><circle cx="100" cy="100" r="18"/>
+        <path d="M100 30c24-26 62-14 62 18s-34 34-34 12 24-22 24-4"/>
+        <path d="M100 170c-24 26-62 14-62-18s34-34 34-12-24 22-24 4"/>
+        <path d="M30 100c-26-24-14-62 18-62s34 34 12 34-22-24-4-24"/>
+        <path d="M170 100c26 24 14 62-18 62s-34-34-12-34 22 24 4 24"/>
+      </g>
+    </symbol>
+    <symbol id="curl" viewBox="0 0 40 40">
+      <path d="M4 20c0-12 14-16 22-10 6 5 2 14-5 13-5-1-5-7-1-7" fill="none" stroke="url(#g)" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<audio id="aud" src="music.mp3" loop preload="auto"></audio>
+<button id="music" aria-label="Музыка" title="Музыка"></button>
+
+<div class="page">
+
+<!-- HERO -->
+<section class="hero">
+  <img class="orn-bg r" src="img/bg.webp" alt="">
+  <div>
+    <p class="script" style="font-size:36px">Мерейтойға шақыру</p>
+    <div class="wreath">
+      <img class="spin" src="img/wreath.webp" alt="">
+      <div class="num"><b>80</b><span>ЖАС</span></div>
+    </div>
+  </div>
+  <div class="hint">
+    <img src="img/arrow.webp" alt="">
+    жоғары көтеріңіз
+  </div>
+</section>
+
+<!-- GREETING -->
+<section class="fade">
+  <img class="orn-bg r" style="top:auto;bottom:-60px" src="img/bg.webp" alt="">
+  <p class="script">Құрметті қонақтар!</p>
+  <p class="caps" style="margin-top:50px">Сіз(дер)ді Байгужина Теңдіктің 80 жас мерей тойына арналған салтанатты ақ дастарханымыздың қадірлі қонағы болуға шақырамыз.</p>
+  <img class="diamond" src="img/diamond.webp" alt="">
+</section>
+
+<!-- CALENDAR -->
+<section class="fade">
+  <img class="orn-bg l" src="img/bg.webp" alt="">
+  <p class="script">Той салтанаты:</p>
+  <div class="cal">
+    <div class="cal-head"><b>Желтоқсан</b><span>2026</span></div>
+    <div class="grid" id="grid">
+      <div class="dow">ДС</div><div class="dow">СС</div><div class="dow">СР</div><div class="dow">БС</div><div class="dow">ЖМ</div><div class="dow">СБ</div><div class="dow">ЖС</div>
+    </div>
+  </div>
+  <div class="start"><span>Басталуы</span><b>13:00</b></div>
+  <img class="divider" src="img/border.webp" alt="">
+</section>
+
+<!-- VENUE -->
+<section class="fade">
+  <p class="script">Мекен-жайымыз:</p>
+  <p class="venue">«Түркістан» мейрамханасы</p>
+  <p class="caps sm">Солтүстік Қазақстан облысы,<br>Есіл ауданы, Явленка ауылы</p>
+  <img class="gis" src="img/2gis.webp" alt="2GIS"><br><a class="btn" href="https://2gis.kz/kz_north_kazakhstan_oblast_rwop/geo/70030077134423136" target="_blank" rel="noopener">Картаны ашу
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+  </a>
+</section>
+
+<!-- COUNTDOWN -->
+<div class="band fade">
+  <img class="heart" src="img/heart.png" alt="">
+  <h3>Оқиғаға дейін</h3>
+  <div class="cd">
+    <div><b id="d">0</b><span>күн</span></div>
+    <div><b id="h">0</b><span>сағат</span></div>
+    <div><b id="m">0</b><span>минут</span></div>
+    <div><b id="s">0</b><span>секунд</span></div>
+  </div>
+</div>
+
+<!-- FROM -->
+<section class="fade">
+  <img class="orn-bg r" src="img/bg.webp" alt="">
+  <p class="script">Той иелері:</p>
+  <p class="caps sm" style="margin-bottom:40px">Балалары</p>
+  <img class="footer-line" src="img/divider.webp" alt="">
+  <p class="caps" style="margin-bottom:6px">Қадірлі қонағымыз<br>болыңыздар!</p>
+</section>
+
+</div>
+
+<script>
+// calendar: December 2026 (1st = Tuesday, week starts Monday), event on the 12th
+(function(){
+  const g=document.getElementById('grid');
+  let h='<div class="d"></div>';            // blank before Tuesday
+  for(let i=1;i<=31;i++)h+=`<div class="d${i===12?' hl':''}">${i}</div>`;
+  g.insertAdjacentHTML('beforeend',h);
+})();
+
+// countdown
+const target=new Date('2026-12-12T13:00:00+05:00').getTime();
+const $=id=>document.getElementById(id);
+function tick(){
+  let t=Math.max(0,target-Date.now());
+  $('d').textContent=Math.floor(t/864e5);
+  $('h').textContent=Math.floor(t/36e5)%24;
+  $('m').textContent=Math.floor(t/6e4)%60;
+  $('s').textContent=Math.floor(t/1e3)%60;
+}
+tick();setInterval(tick,1000);
+
+// reveal
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('show');io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+
+// music
+const a=$('aud'),b=$('music');
+const on='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+const off='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg>';
+function set(p){b.innerHTML=p?on:off;b.classList.toggle('on',p)}
+set(false);
+b.onclick=()=>{a.paused?a.play().then(()=>set(true)).catch(()=>{}):(a.pause(),set(false))};
+a.play().then(()=>set(true)).catch(()=>{
+  const first=()=>{a.play().then(()=>set(true)).catch(()=>{})};
+  ['click','touchstart','scroll'].forEach(ev=>addEventListener(ev,first,{once:true,passive:true}));
+});
+</script>
+</body>
+</html>
